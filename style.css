@@ -313,6 +313,11 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--secondary-color);
 }
 
+/* Mobile Actions - Hide on desktop */
+.mobile-actions {
+    display: none;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
