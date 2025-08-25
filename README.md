@@ -263,19 +263,6 @@ Nếu bạn tìm thấy lỗi, vui lòng tạo issue với:
 - Screenshot (nếu có)
 - Thông tin môi trường (browser, OS)
 
-## 📞 Liên hệ
-
-- **Website**: [coffee1900.com](https://coffee1900.com)
-- **Email**: info@coffee1900.com
-- **Phone**: +84 990 773 9311
-- **Address**: 828 Đ. Sư Vạn Hạnh, Phường 12, Quận 10, TP.HCM
-
-### Social Media
-
-- [Facebook](https://facebook.com/coffee1900)
-- [Instagram](https://instagram.com/coffee1900)
-- [YouTube](https://youtube.com/coffee1900)
-- [TikTok](https://tiktok.com/@coffee1900)
 
 ## 📄 License
 
