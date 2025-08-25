@@ -262,7 +262,7 @@ Nếu bạn tìm thấy lỗi, vui lòng tạo issue với:
 - Các bước tái tạo lỗi
 - Screenshot (nếu có)
 - Thông tin môi trường (browser, OS)
-
+wd
 
 ## 📄 License
 
