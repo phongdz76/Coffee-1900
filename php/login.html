@@ -3,41 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/coffee-cup.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/coffee-cup.png" type="image/x-icon">
     <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Login | Coffee 1900</title>
 </head>
 <body>
-
-    <!-- Login form -->
-    <div class="login-form">
-        <div class="login-form-container">
-            <img src="/assets/login.jpg" alt="">
+    <div class="container">
+        <!-- Background decorative elements -->
+        <div class="bg-decoration">
+            <div class="coffee-bean coffee-bean-1"></div>
+            <div class="coffee-bean coffee-bean-2"></div>
+            <div class="coffee-bean coffee-bean-3"></div>
         </div>
-        <div class="login-form-container">
-            <a href="/index.html" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </a>
-            <div class="login-form-container-child">
-                <form action="login.php" method="post">
-                    <h1>Login</h1>
-                    <label>Username</label>
-                    <br>
-                    <input type="text" placeholder="Username" name="userName" required>
-                    <br><br>
-                    <label>Password</label>
-                    <br>
-                    <input type="password" placeholder="Password" name="passWord" required>
-                    <br><br>
-                    <button>Login</button>
-                    <br><br>
-                    Don't have account ? <a href="./signup.html">Sign up</a>
-                    <br><br>
-                    Forgot <a href="#">password ?</a>
-                </form>
+
+        <!-- Close button -->
+        <a href="../index.html" class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </a>
+
+        <!-- Login card -->
+        <div class="login-card">
+            <div class="login-header">
+                <div class="brand-logo">
+                    <img src="../assets/coffee-cup.png" alt="Coffee 1900" class="logo-img">
+                    <h1>Coffee 1900</h1>
+                </div>
+                <p class="welcome-text">Welcome back! Please sign in to your account</p>
+                
+                <!-- Success message for new signups -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"></polyline>
+                    </svg>
+                    <span>Account created successfully! Please login.</span>
+                </div>
+            </div>
+
+            <form action="login.php" method="post" class="login-form">
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input type="text" id="userName" name="userName" placeholder="Enter your username" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passWord">Password</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <circle cx="12" cy="16" r="1"></circle>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input type="password" id="passWord" name="passWord" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <span>Sign In</span>
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="./signup.html" class="signup-link">Sign up</a></p>
             </div>
         </div>
     </div>
 
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('passWord');
+            const toggleBtn = document.querySelector('.toggle-password');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.innerHTML = `
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                `;
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.innerHTML = `
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                `;
+            }
+        }
+
+        // Check for success message
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === '1') {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'flex';
+                setTimeout(() => {
+                    successMessage.style.opacity = '0';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 300);
+                }, 5000);
+            }
+        });
+    </script>
 </body>
 </html>

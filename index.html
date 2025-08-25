@@ -1,617 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5a0bb5d886.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/coffee.png" type="image/x-icon">
-    <title>Coffee 1900</title>
+    <title>Coffee 1900 - Premium Coffee Experience</title>
 </head>
 <body>
-
-    <!--TODO: COFFEE SHOP HEAD -->
-    <header>
-        <div class="navigation-bar">
-            <div class="logo">
-                <img src="./assets/coffee.png" alt="coffee-cup">
-                <h1>Coffee 1900</h1>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./assets/coffee.png" alt="Coffee 1900">
+                <span>Coffee 1900</span>
             </div>
-            <ul>
-                <li>
-                    <a href="" class="nav-home">Trang Chủ</a>
-                </li>
-                <li>
-                    <div class="home-dropdown">
-                        <a href="" class="nav-product">Sản Phẩm
-                            <i class="fa-solid fa-chevron-down fa-xs" style="color: #000000;"></i>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#products" class="nav-link dropdown-toggle">
+                            Sản Phẩm <i class="fas fa-chevron-down"></i>
                         </a>
-                        <div class="home-dropdown-content">
-                            <a href="" class="dropdown-1">Coffee</a>
-                            <a href="" class="dropdown-2">Coffee Shop</a>
-                            <a href="" class="dropdown-3">Espresso Bar</a>
-                            <a href="" class="dropdown-4">Coffee Roaster</a>
-                            <a href="" class="dropdown-5">Coffee Bistro</a>
-                            <a href="" class="dropdown-6">Tea House</a>
-                        </div>
-                    </div>
-                </li>
-                <li>    
-                    <a href="" class="nav-about">Về Chúng Tôi</a>
-                </li>
-                <li>
-                    <a href="" class="nav-contact">Liên Hệ</a>
-                </li>
-            </ul>
-            <div class="search-shop-signup">
-                <div class="search-shop-signup-child">
-                    <div class="shop-dropdown">
-                        <a href="" class="shop">
-                            <i class="ph ph-shopping-cart"></i>
-                        </a>
-                        <div class="shop-dropdown-content">
-                            <a href="" class="shop-1">Mua Tại Shop</a>
-                            <a href="" class="shop-2">Shopee</a>
-                        </div>
-                    </div>
-                    <a href="" class="location">
-                        <i class="ph ph-map-pin-line"></i>
-                    </a>
-                    <a href="./php/signup.html" class="signup">Đăng Ký</a>
-                    <a href="./php/login.html" class="login">Đăng Nhập</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#espresso">Espresso</a></li>
+                            <li><a href="#americano">Americano</a></li>
+                            <li><a href="#latte">Latte & Cappuccino</a></li>
+                            <li><a href="#specialty">Specialty Coffee</a></li>
+                            <li><a href="#cold-brew">Cold Brew</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Về Chúng Tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Liên Hệ</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Actions -->
+                <div class="mobile-actions">
+                    <a href="./php/login.html" class="btn-login">Đăng Nhập</a>
+                    <a href="./php/signup.html" class="btn-signup">Đăng Ký</a>
                 </div>
             </div>
-        </div>
-    </header>
-
-
-    <!--TODO: COFFEE SHOP SECTION -->
-    <section class="section-1">
-        <div class="master-section">
-            <div class="master-section-child-1">
-                <p class="master-coffee">Làm chủ chất lượng của <br> từng hạt <span style="color: #efae54;">cà phê</span></p>
+            
+            <div class="nav-actions">
+                <a href="#cart" class="nav-action-btn cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#location" class="nav-action-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="./php/login.html" class="btn-login">Đăng Nhập</a>
+                <a href="./php/signup.html" class="btn-signup">Đăng Ký</a>
             </div>
-            <div class="master-section-child-2">
-                <p class="master-section-para">Chất lượng cà phê 1900 đã trở thành một trong những <br> điểm mạnh và nổi tiếng trên toàn thế giới. Cà phê của <br> chúng tôi được sản xuất từ những hạt cà phê chất lượng.</p>
-                <a href="" class="discorver-us">Khám phá thêm <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-        <div class="video">
-            <video src="./assets/Coffee-ad.mkv" width="100%" muted autoplay loop></video>
-            <div class="under-video">
-                <div class="quality-card">
-                    <a href="" class="quality-items">
-                        <img src="./assets/moka-pot.png" alt="">
-                        <h3>Barista</h3>
-                        <p>Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                    </a>
-                    <span class="separater"></span>
-                    <a href="" class="quality-items">
-                        <img src="./assets/coffee-bag.png" alt="">
-                        <h3>Coffee</h3>
-                        <p>Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                    </a>
-                    <span class="separater"></span>
-                    <a href="" class="quality-items">
-                        <img src="./assets/coffee-beans.png" alt="">
-                        <h3>Espresso</h3>
-                        <p>Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                    </a>
-                    <span class="separater"></span>
-                    <a href="" class="quality-items">
-                        <img src="./assets/coffee-plant.png" alt="">
-                        <h3>Espresso</h3>
-                        <p>Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video">
+                <source src="./assets/Coffee-ad.mkv" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Trải Nghiệm <span class="highlight">Cà Phê</span><br>
+                    Đẳng Cấp Thế Giới
+                </h1>
+                <p class="hero-subtitle">
+                    Từ những hạt cà phê được chọn lọc kỹ càng đến từng ly cà phê hoàn hảo,<br>
+                    Coffee 1900 mang đến cho bạn hương vị tinh túy nhất.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Khám Phá Menu</a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-play"></i> Câu Chuyện Của Chúng Tôi
                     </a>
                 </div>
             </div>
         </div>
-
-        <div class="glass-coffee">
-            <div class="glass-container">
-                <div class="glass-row">
-                    <div class="glass-img-parent">
-                        <img class="glass-img" src="./assets/battlecreek-coffee-roasters.jpg" alt="">
-                    </div>
-                    <div class="glass-column">
-                        <p class="glass-para-1">Dịch vụ cộng tác</p>
-                        <p class="glass-para-2">Chất lượng hạt <br> cà phê tinh tế</p>
-                        <p class="glass-para-3">Chúng tôi đặt chất lượng sản phẩm và an toàn vệ sinh trong <br> quá trình sản xuất lên hàng đầu</p>
-                        <p class="glass-para-4"><span style="font-size: 1.4rem; opacity: 60%;">01.</span> Hỗn hợp pha chế khác nhau</p>
-                        <hr>
-                        <p class="glass-para-5"><span style="font-size: 1.4rem; opacity: 60%;">02.</span> Rang chuyên nghiệp</p>
-                        <a href="" class="glass-buynow">Mua ngay</a>
-                    </div>
-                </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
             </div>
-        </div>
-        <div class="leaf-1">
-            <img src="./assets/roaster-deco-1.webp" alt="">
         </div>
     </section>
 
-    <section class="section-2">
-        <div class="product">
-            <div class="product-parent">
-                <div class="product-row">
-                    <div class="product-heading">
-                        <p class="section-top-para">Sản Phẩm Tiêu Biểu</p>
-                        <p class="section-next-para">Khám phá hương vị <br> cà phê hoàn hảo</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="./assets/moka-pot.png" alt="Barista">
                     </div>
-                    <div class="product-card">
-                        <div class="product-items">
-                            <a href="">
-                                <img src="./assets/prod9-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Coffee Blend</a>
-                            <p>$19.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod10-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Basecamp Blend</a>
-                            <p>$18.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod11-copyright-480x528 (1).jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod12-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod13-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="">
-                                <img src="./assets/./prod9-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Coffee Blend</a>
-                            <p>$19.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod10-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Basecamp Blend</a>
-                            <p>$18.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod11-copyright-480x528 (1).jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod12-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod13-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod12-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod13-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Backwoods Roast</a>
-                            <p>$14.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="">
-                                <img src="./assets/./prod9-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Coffee Blend</a>
-                            <p>$19.00</p>
-                        </div>
-                        <div class="product-items">
-                            <a href="" class="">
-                                <img src="./assets/prod10-copyright-480x528.jpg" alt="">
-                            </a>
-                            <a href="" class="">Basecamp Blend</a>
-                            <p>$18.00</p>
-                        </div>
+                    <h3>Barista Chuyên Nghiệp</h3>
+                    <p>Đội ngũ barista giàu kinh nghiệm, được đào tạo bài bản để tạo ra những ly cà phê hoàn hảo nhất.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="./assets/coffee-beans.png" alt="Premium Beans">
                     </div>
+                    <h3>Hạt Cà Phê Cao Cấp</h3>
+                    <p>Chọn lọc từ những vùng trồng cà phê nổi tiếng, đảm bảo chất lượng và hương vị tuyệt hại.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="./assets/coffee-cup.png" alt="Perfect Brewing">
+                    </div>
+                    <h3>Pha Chế Hoàn Hảo</h3>
+                    <p>Áp dụng những kỹ thuật pha chế hiện đại kết hợp với bí quyết truyền thống.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="./assets/coffee-plant.png" alt="Fresh">
+                    </div>
+                    <h3>Tươi Mới Mỗi Ngày</h3>
+                    <p>Rang xay hàng ngày để đảm bảo độ tươi ngon và giữ trọn hương vị đặc trưng.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-3">
-        <div class="honor">
-            <div class="honor-parent">
-                <div class="honor-row">
-                    <div class="honor-heading">
-                        <p class="honor-heading-1">Niềm vinh hạnh to lớn</p>
-                        <p class="honor-heading-2">Thành tích của chúng tôi</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="./assets/battlecreek-coffee-roasters.jpg" alt="Coffee Roasting">
+                    <div class="about-badge">
+                        <span>Chất lượng hàng đầu</span>
                     </div>
-                    <div class="honor-column-award">
-                        <div class="honor-column-award-child">
-                            <div class="award-para-parent">
-                                <p class="award-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam exercitationem dolor <br> eveniet dolorum, possimus qui, eius nam dolorem, corporis odio aliquam magni error <br> ea architecto et in odit? Rem, iusto?</p>
-                                <a href="" class="find-more">Khám phá thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="about-content">
+                    <div class="section-header">
+                        <span class="section-subtitle">Câu Chuyện Của Chúng Tôi</span>
+                        <h2 class="section-title">Passion For Perfect Coffee</h2>
+                    </div>
+                    
+                    <p class="about-text">
+                        Được thành lập từ năm 1900, Coffee 1900 đã trở thành biểu tượng của sự chất lượng và 
+                        đam mê trong ngành cà phê. Chúng tôi tin rằng mỗi ly cà phê đều có một câu chuyện riêng.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-number">01</div>
+                            <div class="feature-text">
+                                <h4>Nguồn Gốc Rõ Ràng</h4>
+                                <p>Truy xuất nguồn gốc từng hạt cà phê từ trang trại đến tách cà phê</p>
                             </div>
-                            <hr style="margin-left: 0px; margin-top: 40px; margin-bottom: 40px; width: 90%;">
-                            <div class="award-table">
-                                <div class="award-table-row">
-                                    <div class="award-table-column">
-                                        <p class="award-heading">Blend of the day</p>
-                                        <p class="award-sub-heading">Coffee Awards</p>
-                                        <p class="award-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
-                                    </div>
-                                    <div class="award-table-column">
-                                        <p class="award-heading">Best coffee business</p>
-                                        <p class="award-sub-heading">Coffee Awards</p>
-                                        <p class="award-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
-                                    </div>
-                                    <div class="award-table-column">
-                                        <p class="award-heading">Premium roaster</p>
-                                        <p class="award-sub-heading">Coffee Awards</p>
-                                        <p class="award-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
-                                    </div>
-                                    <div class="award-table-column">
-                                        <p class="award-heading">Cafe & coffee shop</p>
-                                        <p class="award-sub-heading">Coffee Awards</p>
-                                        <p class="award-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam?</p>
-                                    </div>
-                                </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-number">02</div>
+                            <div class="feature-text">
+                                <h4>Rang Xay Thủ Công</h4>
+                                <p>Quy trình rang xay được kiểm soát tỉ mỉ để tạo ra hương vị hoàn hảo</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <a href="#products" class="btn btn-primary">Khám Phá Sản Phẩm</a>
                 </div>
             </div>
-        </div>
-        <div class="leaf-2">
-            <img src="./assets/roaster-deco-1.webp" alt="">
         </div>
     </section>
 
-    <section class="section-4">
-        <div class="exquisite">
-            <div class="mySlides fade">
-                <img class="coffee-bean" src="./assets/coffee-stuff.jpg" alt="">
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Menu Đặc Biệt</span>
+                <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+                <p class="section-description">
+                    Khám phá bộ sưu tập cà phê đặc biệt được tuyển chọn và rang xay thủ công
+                </p>
             </div>
-            <div class="mySlides fade">
-                <img class="coffee-jar" src="./assets/coffee-jar.jpg" alt="">
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="hot">Cà Phê Nóng</button>
+                <button class="filter-btn" data-filter="cold">Cà Phê Lạnh</button>
+                <button class="filter-btn" data-filter="specialty">Đặc Biệt</button>
             </div>
-            <div class="exquisite-parent">
-                <div class="exquisite-row">
-                    <div class="exquisite-column-heading">
-                        <p class="exquisite-column-heading-1">Những gì chúng tôi làm</p>
-                        <p class="exquisite-column-heading-2">Hạt cà phê tinh tế</p>
-                        <p class="exquisite-column-heading-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat harum <br> autem dignissimos eius sunt ex veritatis nulla maxime id</p>
-                        <a onclick="plusSlides(-1)" class="prev">
-                            <i class="ph-thin ph-arrow-circle-left"></i>
-                        </a>
-                        <a onclick="plusSlides(1)" class="next">
-                            <i class="ph-thin ph-arrow-circle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="exquisite-subrc">
-            <div class="exquisite-subrc-parent">
-                <div class="exquisite-subrc-row">
-                    <div class="exquisite-subrc-column">
-                        <p class="exquisite-subrc-heading">Đăng ký bảng tin!</p>
-                    </div>
-                    <div class="exquisite-subrc-form">
-                        <div class="exquisite-subrc-input-form-input">
-                            <form action="login.html" method="get">
-                                <input type="text" placeholder="Nhập email" required>
-                            </form>
-                        </div>
-                        <hr style="margin-top: 0; margin-bottom: 13px; width: 700px;">
-                        <div class="exquisite-subrc-input-form-checkbox">
-                            <form class="checkbox-container">
-                                <input type="checkbox" name="checkbox">
-                                <span class="checkmark"></span>
-                                Tôi đồng ý với
-                                <a href="" class="policy">điều khoản</a>
-                            </form>
+            
+            <div class="products-grid">
+                <div class="product-card" data-category="hot">
+                    <div class="product-image">
+                        <img src="./assets/prod9-copyright-480x528.jpg" alt="Espresso Classic">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="exquisite-subrc-subcribe">
-                        <a href="" class="">
-                            <i class="fa-regular fa-paper-plane fa-sm" style="color: #504a43;"></i>
-                            Đăng ký
-                        </a>
+                    <div class="product-info">
+                        <h3 class="product-name">Espresso Classic</h3>
+                        <p class="product-description">Hương vị espresso đậm đà truyền thống</p>
+                        <div class="product-price">45,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="hot">
+                    <div class="product-image">
+                        <img src="./assets/prod10-copyright-480x528.jpg" alt="Cappuccino Premium">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cappuccino Premium</h3>
+                        <p class="product-description">Cappuccino với foam milk hoàn hảo</p>
+                        <div class="product-price">55,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="cold">
+                    <div class="product-image">
+                        <img src="./assets/prod11-copyright-480x528 (1).jpg" alt="Iced Americano">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Iced Americano</h3>
+                        <p class="product-description">Americano lạnh tươi mát</p>
+                        <div class="product-price">50,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="specialty">
+                    <div class="product-image">
+                        <img src="./assets/prod12-copyright-480x528.jpg" alt="Coffee Blend Signature">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Coffee Blend Signature</h3>
+                        <p class="product-description">Blend đặc biệt của Coffee 1900</p>
+                        <div class="product-price">65,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="cold">
+                    <div class="product-image">
+                        <img src="./assets/prod13-copyright-480x528.jpg" alt="Cold Brew">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cold Brew Original</h3>
+                        <p class="product-description">Cà phê cold brew nguyên bản</p>
+                        <div class="product-price">60,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="hot">
+                    <div class="product-image">
+                        <img src="./assets/prod9-copyright-480x528.jpg" alt="Latte Art">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn-quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Latte Art Special</h3>
+                        <p class="product-description">Latte với latte art đặc biệt</p>
+                        <div class="product-price">58,000₫</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="btn btn-outline">Xem Tất Cả Sản Phẩm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Năm Kinh Nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50k+</div>
+                    <div class="stat-label">Khách Hàng Hài Lòng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25</div>
+                    <div class="stat-label">Chi Nhánh Toàn Quốc</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Loại Cà Phê</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Bộ Sưu Tập</span>
+                <h2 class="section-title">Không Gian Coffee 1900</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./assets/coffee-stuff.jpg" alt="Coffee Space">
+                    <div class="gallery-overlay">
+                        <h4>Không Gian Thư Giãn</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/coffee-jar.jpg" alt="Coffee Making">
+                    <div class="gallery-overlay">
+                        <h4>Quy Trình Pha Chế</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/staff.jpg" alt="Our Team">
+                    <div class="gallery-overlay">
+                        <h4>Đội Ngũ Chuyên Nghiệp</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/battlecreek-coffee-roasters.jpg" alt="Coffee Beans">
+                    <div class="gallery-overlay">
+                        <h4>Hạt Cà Phê Cao Cấp</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-5">
-        <div class="post">
-            <div class="post-parent">
-                <div class="post-row">
-                    <div class="post-heading">
-                        <p class="post-heading-1">Từ Bảng Tin</p>
-                        <p class="post-heading-2">Bài viết mới nhất</p>
-                    </div>
-                    <div class="post-card">
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-1.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Làm thế nào để nơi làm hạt cà phê quản lý quy trình sản xuất</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-2.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Giảm thiểu khí thải trong quá trình sản xuất</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-3.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Trở thành một nhân viên pha chế đặc biệt sẽ như thế nào</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-4.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-5.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-1.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-2.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-3.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-4.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph-bold ph-dot"></i> 0 Comments</p>
-                        </a>
-                        <a href="" class="post-items">
-                            <img src="./assets/new-post-1.jpg" alt="">
-                            <h3 class="post-items-head">Espresso</h3>
-                            <p class="post-items-content">Our coffee are carefully selected <br> for quality, flavors, and social impact.</p>
-                            <p class="post-items-info">May 23, 2023 <i class="ph ph-dot"></i> 0 Comments</p>
-                        </a>
-                    </div>
-                </div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Phản Hồi Khách Hàng</span>
+                <h2 class="section-title">Họ Nói Gì Về Chúng Tôi</h2>
             </div>
-        </div>
-    </section>
-
-    <section class="section-6">
-        <div class="infinite-scroll">
-            <div class="scroll">
-                <div class="RightToLeft">
-                    <p>Coffee <img src="./assets/coffee-bean.png" alt=""> Espresso <img src="./assets/coffee-bean.png" alt=""> Bar <img src="./assets/coffee-bean.png" alt=""> Menu <img src="./assets/coffee-bean.png" alt="">
-                        Coffee <img src="./assets/coffee-bean.png" alt=""> Espresso <img src="./assets/coffee-bean.png" alt=""> Bar <img src="./assets/coffee-bean.png" alt=""> Menu <img src="./assets/coffee-bean.png" alt=""></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-7">
-        <div class="customer-says">
-            <div class="customer-says-parent">
-                <div class="customer-says-row">
-                    <div class="customer-says-heading">
-                        <p class="customer-says-heading-1">Lời chứng thật</p>
-                        <p class="customer-says-heading-2">Khách hàng nói gì về chúng tôi</p>
-                        <p class="customer-says-heading-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos perferendis asperiores consequatur, amet reiciendis quibusdam?
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Cà phê ở Coffee 1900 thực sự tuyệt vời! Hương vị đậm đà và dịch vụ chu đáo. 
+                            Tôi sẽ quay lại đây thường xuyên."
                         </p>
-                        <div class="customer-says-message-parent">
-                            <div class="customer-says-message customer-fade">
-                                <div class="customer-says-message-icon">
-                                    <a onclick="nextSlides(-1)" class="customer-says-next">
-                                        <i class="ph ph-arrow-left"></i>
-                                    </a>
-                                    <img src="./assets/profile-1.jpg" alt="">
-                                    <a onclick="nextSlides(1)" class="customer-says-prev">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                                <div class="customer-says-message-content">
-                                    <p class="customer-says-message-content-heading-1">
-                                        Gần đây tôi đã thử sản phẩm cà phê mới, và tôi phải nói rằng nó đã hoàn toàn biến đổi cách tôi bắt đầu mỗi buổi sáng! Là một người yêu cà phê, tôi khá kén chọn về loại cà phê tôi dùng, và sản phẩm này đã vượt xa mong đợi của tôi từ mọi góc độ.
-                                    </p>
-                                    <p class="customer-says-message-content-heading-2">
-                                        <i class="ph-fill ph-quotes"></i>
-                                        <br>
-                                        <span>Lucy Jsor</span>
-                                        <br>
-                                        Barista
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="customer-says-message customer-fade">
-                                <div class="customer-says-message-icon">
-                                    <a onclick="nextSlides(-1)" class="customer-says-next">
-                                        <i class="ph ph-arrow-left"></i>
-                                    </a>
-                                    <img src="./assets/profile-2.jpg" alt="">
-                                    <a onclick="nextSlides(1)" class="customer-says-prev">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                                <div class="customer-says-message-content">
-                                    <p class="customer-says-message-content-heading-1">
-                                        Mùi thơm mà sản phẩm này mang lại đủ để đánh thức tôi và làm tôi nở một nụ cười. Hạt cà phê rõ ràng là chất lượng cao và dường như đã được rang đến hoàn hảo. Hương vị rất đậm đà và mạnh mẽ, với sự cân bằng hoàn hảo giữa độ acid và độ ngọt. Nó có vị mềm mịn, mượt mà khiến mỗi ngụm đều trở thành một niềm vui thực sự.
-                                    </p>
-                                    <p class="customer-says-message-content-heading-2">
-                                        <i class="ph-fill ph-quotes"></i>
-                                        <br>
-                                        <span>Jennifer Quinn</span>
-                                        <br>
-                                        Barista
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="customer-says-message customer-fade">
-                                <div class="customer-says-message-icon">
-                                    <a onclick="nextSlides(-1)" class="customer-says-next">
-                                        <i class="ph ph-arrow-left"></i>
-                                    </a>
-                                    <img src="./assets/profile-3.jpg" alt="">
-                                    <a onclick="nextSlides(1)" class="customer-says-prev">
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                                <div class="customer-says-message-content">
-                                    <p class="customer-says-message-content-heading-1">
-                                        Điều ấn tượng nhất đối với tôi là tính tiện lợi. Bao bì không chỉ thân thiện với môi trường mà còn vô cùng thực tế. Túi đóng lại giữ cho cà phê luôn tươi ngon trong thời gian dài, và mức xay vừa đủ cho máy pha cà phê của tôi.
-                                    </p>
-                                    <p class="customer-says-message-content-heading-2">
-                                        <i class="ph-fill ph-quotes"></i>
-                                        <br>
-                                        <span>James Rinar</span>
-                                        <br>
-                                        Barista
-                                    </p>
-                                </div>
+                        <div class="testimonial-author">
+                            <img src="./assets/profile-1.jpg" alt="Customer">
+                            <div class="author-info">
+                                <h4>Nguyễn Văn An</h4>
+                                <span>Khách hàng thân thiết</span>
                             </div>
                         </div>
                     </div>
-                    <div class="customer-says-image">
-                        <img src="./assets/staff.jpg" alt="">
-                        <div class="customer-says-stat">
-                            <p class="customer-says-stat-heading">Cà phê và chất lượng phục vụ tốt</p>
-                            <p class="customer-says-stat-info-heading-1">
-                                <span class="customer-says-heading-1-before-after">100+</span>
-                                <span class="customer-says-heading-2-before-after">12</span>
-                            </p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Không gian ấm cúng, cà phê thơm ngon. Coffee 1900 là nơi lý tưởng để 
+                            làm việc và gặp gỡ bạn bè."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="./assets/profile-2.jpg" alt="Customer">
+                            <div class="author-info">
+                                <h4>Trần Thị Bình</h4>
+                                <span>Blogger ẩm thực</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Chất lượng cà phê luôn đảm bảo, barista chuyên nghiệp và nhiệt tình. 
+                            Đây chính là coffee shop yêu thích của tôi!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="./assets/profile-3.jpg" alt="Customer">
+                            <div class="author-info">
+                                <h4>Lê Minh Cảnh</h4>
+                                <span>Doanh nhân</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="clients">
-            <div class="clients-parent">
-                <div class="clients-row">
-                    <img src="./assets/coffee-client-1.png" alt="">
-                    <img src="./assets/coffee-client-2.png" alt="">
-                    <img src="./assets/coffee-client-3.png" alt="">
-                    <img src="./assets/coffee-client-4.png" alt="">
-                    <img src="./assets/coffee-client-5.png" alt="">
-                    <img src="./assets/coffee-client-6.png" alt="">
+            
+            <div class="testimonial-nav">
+                <button class="nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="nav-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
                 </div>
+                <button class="nav-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-        </div>
-        <div class="roaster-decor">
-            <img src="./assets/roaster-deco-2-2.png" alt="">
         </div>
     </section>
 
-    <!--TODO: COFFEE SHOP FOOTER -->
-    <footer>
-        <div class="footer">
-            <div class="footer-parent">
-                <div class="footer-row-1">
-                    <div class="footer-heading">
-                        <img src="./assets/coffee.png" alt="">
-                        <p>Coffee 1900</p>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Đăng Ký Nhận Tin Mới</h2>
+                    <p>Nhận thông tin về sản phẩm mới, khuyến mãi đặc biệt và những câu chuyện thú vị về cà phê</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Nhập email của bạn" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </div>
-                    <ul class="footer-navigation-bar-ul">
-                        <li class="footer-navigation-bar-li">
-                            <a href="" class="footer-home">Trang Chủ</a>
-                        </li>
-                        <li class="footer-navigation-bar-li">
-                            <a href="" class="footer-product">Sản Phẩm</a>
-                        </li>
-                        <li class="footer-navigation-bar-li">
-                            <a href="" class="footer-about">Về Chúng Tôi</a>
-                        </li>
-                        <li class="footer-navigation-bar-li">
-                            <a href="" class="footer-contact">Liên Hệ</a>
-                        </li>
-                        <li class="footer-navigation-bar-li">
-                            <a href="" class="footer-shop">Cửa Hàng</a>
-                        </li>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">
+                            Tôi đồng ý với <a href="#" class="privacy-link">Chính sách bảo mật</a>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Tin Tức</span>
+                <h2 class="section-title">Bài Viết Mới Nhất</h2>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/new-post-1.jpg" alt="Coffee Tips">
+                        <div class="blog-category">Tips</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">15 Tháng 8, 2024</span>
+                            <span class="blog-author">Coffee 1900</span>
+                        </div>
+                        <h3 class="blog-title">5 Cách Pha Cà Phê Hoàn Hảo Tại Nhà</h3>
+                        <p class="blog-excerpt">
+                            Khám phá những bí quyết để pha một tách cà phê ngon như ở coffee shop...
+                        </p>
+                        <a href="#" class="blog-link">Đọc tiếp</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/new-post-2.jpg" alt="Coffee Culture">
+                        <div class="blog-category">Culture</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">12 Tháng 8, 2024</span>
+                            <span class="blog-author">Coffee 1900</span>
+                        </div>
+                        <h3 class="blog-title">Văn Hóa Cà Phê Việt Nam Qua Các Thời Kỳ</h3>
+                        <p class="blog-excerpt">
+                            Hành trình phát triển của cà phê Việt Nam từ những ngày đầu đến hiện tại...
+                        </p>
+                        <a href="#" class="blog-link">Đọc tiếp</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./assets/new-post-3.jpg" alt="Coffee Health">
+                        <div class="blog-category">Health</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">10 Tháng 8, 2024</span>
+                            <span class="blog-author">Coffee 1900</span>
+                        </div>
+                        <h3 class="blog-title">Lợi Ích Sức Khỏe Của Cà Phê</h3>
+                        <p class="blog-excerpt">
+                            Những tác dụng tích cực của cà phê đối với sức khỏe mà bạn nên biết...
+                        </p>
+                        <a href="#" class="blog-link">Đọc tiếp</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <div class="clients-slider">
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-1.png" alt="Client 1">
+                </div>
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-2.png" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-3.png" alt="Client 3">
+                </div>
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-4.png" alt="Client 4">
+                </div>
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-5.png" alt="Client 5">
+                </div>
+                <div class="client-logo">
+                    <img src="./assets/coffee-client-6.png" alt="Client 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./assets/coffee.png" alt="Coffee 1900">
+                        <span>Coffee 1900</span>
+                    </div>
+                    <p class="footer-desc">
+                        Mang đến trải nghiệm cà phê tuyệt vời nhất với chất lượng cao và dịch vụ chuyên nghiệp.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Menu</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#about">Về Chúng Tôi</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                        <li><a href="./pages/location/location.html">Cửa Hàng</a></li>
                     </ul>
                 </div>
-                <hr style="opacity: 30%; width: 69%;">
-                <div class="footer-row-2">
-                    <div class="footer-address">
-                        <p>828,</p>
-                        <p>Đ. Sư Vạn Hạnh</p>
-                        <p>Phường 12,</p>
-                        <p>Quận 10.</p>
-                    </div>
-                    <div class="footer-contact">
-                        <a href="" class="phone-number">+84 - 990 773 9311</a>
-                        <a href="" class="mail">phongnguyen@gmail.com</a>
-                    </div>
-                    <div class="footer-get-update">
-                        <p>Cập nhật thông tin từ chúng tôi</p>
-                        <a href="" class="update">Đăng Ký Ngay</a>
-                    </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Espresso</a></li>
+                        <li><a href="#">Americano</a></li>
+                        <li><a href="#">Latte</a></li>
+                        <li><a href="#">Cappuccino</a></li>
+                        <li><a href="#">Cold Brew</a></li>
+                    </ul>
                 </div>
-                <div class="contact">
-                    <div class="contact-parent">
-                        <div class="contact-row">
-                            <div class="contact-column">
-                                <p>Coffee1900 © 2023. Đã đăng ký bản quyền.</p>
-                            </div>
-                            <div class="contact-column">
-                                <a href="" class="community">
-                                    <i id="community-icon-face" class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
-                                    <i id="community-icon-insta" class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
-                                    <i id="community-icon-youtube" class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
-                                </a>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>828 Đ. Sư Vạn Hạnh</span>
+                                <span>Phường 12, Quận 10, TP.HCM</span>
                             </div>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+84 990 773 9311</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@coffee1900.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Coffee 1900. Tất cả quyền được bảo lưu.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Chính Sách Bảo Mật</a>
+                        <a href="#">Điều Khoản Sử Dụng</a>
+                        <a href="#">Chính Sách Đổi Trả</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <script src="main.js"></script>
 </body>
 </html>

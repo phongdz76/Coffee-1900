@@ -3,42 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/coffee-cup.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/coffee-cup.png" type="image/x-icon">
     <link rel="stylesheet" href="signup.css">
-    <title>Sign-up | Coffee 1900</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sign Up | Coffee 1900</title>
 </head>
 <body>
-
-    <!-- Login form -->
-    <div class="signup-form">
-        <div class="signup-form-container">
-            <img src="/assets/login.jpg" alt="">
+    <div class="container">
+        <!-- Background decorative elements -->
+        <div class="bg-decoration">
+            <div class="coffee-bean coffee-bean-1"></div>
+            <div class="coffee-bean coffee-bean-2"></div>
+            <div class="coffee-bean coffee-bean-3"></div>
+            <div class="coffee-bean coffee-bean-4"></div>
         </div>
-        <div class="signup-form-container">
-            <a href="/index.html" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </a>
-            <div class="signup-form-container-child">
-                <form action="login" method="get">
-                    <h1>Sign Up</h1>
-                    <label>Username</label>
-                    <br>
-                    <input type="text" placeholder="Enter Username">
-                    <br><br>
-                    <label>Password</label>
-                    <br>
-                    <input type="password" placeholder="Enter Password">
-                    <br><br>
-                    <label>Confirm password</label>
-                    <input type="password" placeholder="Confirm Password">
-                    <br><br>
-                    <button>Sign Up Now</button>
-                    <br><br>
-                    Already have account ? <a href="./login.html">Login now</a>
-                </form>
+
+        <!-- Close button -->
+        <a href="../index.html" class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </a>
+
+        <!-- Signup card -->
+        <div class="signup-card">
+            <div class="signup-header">
+                <div class="brand-logo">
+                    <img src="../assets/coffee-cup.png" alt="Coffee 1900" class="logo-img">
+                    <h1>Coffee 1900</h1>
+                </div>
+                <p class="welcome-text">Create your account and join our coffee community</p>
+            </div>
+
+            <form action="signup.php" method="post" class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <path d="M20 8v6"></path>
+                            <path d="M23 11h-6"></path>
+                        </svg>
+                        <input type="text" id="userName" name="userName" placeholder="Choose a username" required>
+                        <div class="validation-icon" id="usernameValidation"></div>
+                    </div>
+                    <div class="input-hint">Username must be at least 3 characters long</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="validation-icon" id="emailValidation"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passWord">Password</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <circle cx="12" cy="16" r="1"></circle>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input type="password" id="passWord" name="passWord" placeholder="Create a password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('passWord')">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="password-strength" id="passwordStrength">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <span class="strength-text" id="strengthText">Password strength</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-container">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <circle cx="12" cy="16" r="1"></circle>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                        <div class="validation-icon" id="confirmValidation"></div>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="signup-btn">
+                    <span>Create Account</span>
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="signup-footer">
+                <p>Already have an account? <a href="./login.html" class="login-link">Sign in</a></p>
             </div>
         </div>
     </div>
 
+    <script>
+        function togglePassword(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleBtn = passwordInput.nextElementSibling;
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.innerHTML = `
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                    </svg>
+                `;
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.innerHTML = `
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                `;
+            }
+        }
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            
+            return strength;
+        }
+
+        // Real-time validation
+        document.getElementById('passWord').addEventListener('input', function() {
+            const password = this.value;
+            const strength = checkPasswordStrength(password);
+            const strengthFill = document.getElementById('strengthFill');
+            const strengthText = document.getElementById('strengthText');
+            
+            const strengthLabels = ['Very Weak', 'Weak', 'Fair', 'Good', 'Strong'];
+            const strengthColors = ['#654321', '#8B4513', '#B8860B', '#D4A574', '#2C1810'];
+            
+            if (password.length > 0) {
+                strengthFill.style.width = (strength * 20) + '%';
+                strengthFill.style.backgroundColor = strengthColors[strength - 1] || '#654321';
+                strengthText.textContent = strengthLabels[strength - 1] || 'Very Weak';
+                strengthText.style.color = strengthColors[strength - 1] || '#654321';
+            } else {
+                strengthFill.style.width = '0%';
+                strengthText.textContent = 'Password strength';
+                strengthText.style.color = '#4A4A4A';
+            }
+        });
+
+        // Confirm password validation
+        function validatePasswords() {
+            const password = document.getElementById('passWord').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const validation = document.getElementById('confirmValidation');
+            
+            if (confirmPassword.length > 0) {
+                if (password === confirmPassword) {
+                    validation.innerHTML = `
+                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                    `;
+                    validation.style.color = '#2C1810';
+                } else {
+                    validation.innerHTML = `
+                        <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    `;
+                    validation.style.color = '#654321';
+                }
+            } else {
+                validation.innerHTML = '';
+            }
+        }
+
+        document.getElementById('confirmPassword').addEventListener('input', validatePasswords);
+        document.getElementById('passWord').addEventListener('input', validatePasswords);
+
+        // Username validation
+        document.getElementById('userName').addEventListener('input', function() {
+            const username = this.value;
+            const validation = document.getElementById('usernameValidation');
+            
+            if (username.length >= 3) {
+                validation.innerHTML = `
+                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"></polyline>
+                    </svg>
+                `;
+                validation.style.color = '#2C1810';
+            } else if (username.length > 0) {
+                validation.innerHTML = `
+                    <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                `;
+                validation.style.color = '#654321';
+            } else {
+                validation.innerHTML = '';
+            }
+        });
+
+        // Email validation
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+            const validation = document.getElementById('emailValidation');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailRegex.test(email)) {
+                validation.innerHTML = `
+                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20,6 9,17 4,12"></polyline>
+                    </svg>
+                `;
+                validation.style.color = '#2C1810';
+            } else if (email.length > 0) {
+                validation.innerHTML = `
+                    <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                `;
+                validation.style.color = '#654321';
+            } else {
+                validation.innerHTML = '';
+            }
+        });
+    </script>
 </body>
 </html>
