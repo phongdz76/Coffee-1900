@@ -20,6 +20,8 @@ Coffee 1900 là một website của cửa hàng cà phê cao cấp, mang đến 
 
 - 🏠 **Trang chủ hiện đại** - Hero section với video background
 - 🛍️ **Catalog sản phẩm** - Hiển thị menu cà phê với bộ lọc
+- 🔐 **Đăng ký/Đăng nhập frontend** - Lưu tài khoản bằng localStorage
+- 🛒 **Giỏ hàng + đặt hàng mô phỏng** - Hoạt động thuần client-side
 - 📱 **Responsive Design** - Tối ưu cho mọi thiết bị
 - 🎨 **Giao diện đẹp mắt** - Sử dụng màu sắc và typography chuyên nghiệp
 - 🔄 **Hiệu ứng mượt mà** - CSS animations và transitions
@@ -37,13 +39,13 @@ Coffee 1900 là một website của cửa hàng cà phê cao cấp, mang đến 
 <summary>Xem ảnh chụp màn hình</summary>
 
 ![Homepage](./assets/screenshot-home.png)
-*Trang chủ với hero section*
+_Trang chủ với hero section_
 
 ![Products](./assets/screenshot-products.png)
-*Trang sản phẩm*
+_Trang sản phẩm_
 
 ![Mobile](./assets/screenshot-mobile.png)
-*Giao diện mobile*
+_Giao diện mobile_
 
 </details>
 
@@ -59,9 +61,8 @@ Coffee 1900 là một website của cửa hàng cà phê cao cấp, mang đến 
 - **Build Tool:**
   - Vite - Build tool và dev server
 
-- **Backend (Tương lai):**
-  - PHP - Server-side logic
-  - MySQL - Database (planned)
+- **Client Storage:**
+  - localStorage - Lưu phiên đăng nhập, giỏ hàng và đơn hàng mô phỏng
 
 ## 📁 Cấu trúc thư mục
 
@@ -78,16 +79,16 @@ Coffee-1900/
 │   ├── coffee-*.png/jpg      # Hình ảnh sản phẩm
 │   └── ...                   # Các assets khác
 ├── 📄 pages/                  # Các trang phụ
-│   └── location/             # Trang vị trí cửa hàng
-│       ├── location.html
-│       └── location.css
-├── 🔐 php/                    # Backend PHP
-│   ├── login.html            # Trang đăng nhập
-│   ├── login.php             # Logic đăng nhập
-│   ├── signup.html           # Trang đăng ký
-│   └── signup.php            # Logic đăng ký
-└── 🔧 public/                 # Public assets
-    └── vite.svg
+│   ├── auth/                 # Đăng nhập/đăng ký frontend
+│   │   ├── login.html
+│   │   ├── signup.html
+│   │   ├── auth.css
+│   │   └── auth.js
+│   └── cart/                 # Trang giỏ hàng
+│       ├── cart.html
+│       ├── cart.css
+│       └── cart.js
+└── ⚙️ vite.config.js          # Cấu hình build multi-page
 ```
 
 ## 🚀 Cài đặt và chạy
@@ -96,7 +97,6 @@ Coffee-1900/
 
 - Node.js >= 16.0.0
 - npm hoặc yarn
-- Web server (Apache/Nginx cho PHP)
 
 ### 1. Clone repository
 
@@ -156,15 +156,15 @@ npm run preview
 ### 🎨 Design System
 
 #### Màu sắc
+
 ```css
---primary-color: #D4A574    /* Vàng đồng chủ đạo */
---secondary-color: #8B4513  /* Nâu cà phê */
---accent-color: #F4E4C1     /* Kem nhạt */
---dark-color: #2C1810       /* Nâu đậm */
---text-color: #4A4A4A       /* Xám chữ */
+--primary-color: #d4a574 /* Vàng đồng chủ đạo */ --secondary-color: #8b4513
+  /* Nâu cà phê */ --accent-color: #f4e4c1 /* Kem nhạt */ --dark-color: #2c1810
+  /* Nâu đậm */ --text-color: #4a4a4a /* Xám chữ */;
 ```
 
 #### Typography
+
 - **Heading**: Playfair Display (serif)
 - **Body**: Inter (sans-serif)
 
@@ -175,19 +175,19 @@ npm run preview
 File `vite.config.js` (tạo nếu cần):
 
 ```javascript
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: './',
+  base: "./",
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets'
+    outDir: "dist",
+    assetsDir: "assets",
   },
   server: {
     port: 3000,
-    open: true
-  }
-})
+    open: true,
+  },
+});
 ```
 
 ### Environment Variables
@@ -262,7 +262,7 @@ Nếu bạn tìm thấy lỗi, vui lòng tạo issue với:
 - Các bước tái tạo lỗi
 - Screenshot (nếu có)
 - Thông tin môi trường (browser, OS)
-wd
+  wd
 
 ## 📄 License
 
