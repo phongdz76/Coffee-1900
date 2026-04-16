@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5a0bb5d886.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../../assets/coffee.png" type="image/x-icon">
+    <link rel="stylesheet" href="./cart.css">
+    <title>Giỏ Hàng | Coffee 1900</title>
+</head>
+
+<body>
+    <header class="cart-header">
+        <div class="container cart-header-inner">
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/coffee.png" alt="Coffee 1900">
+                <span>Coffee 1900</span>
+            </a>
+            <nav class="cart-nav" aria-label="Điều hướng giỏ hàng">
+                <a href="../../index.html" class="cart-link">Trang Chủ</a>
+                <a href="../../index.html#products" class="cart-link cart-link-primary">Tiếp Tục Mua Hàng</a>
+            </nav>
+            <div class="cart-auth-actions" id="cartAuthActions">
+                <a href="../auth/login.html?redirect=../cart/cart.html" class="cart-link">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <section class="container cart-section">
+            <div class="cart-layout">
+                <div class="cart-items-panel">
+                    <div class="cart-heading">
+                        <p class="cart-subtitle">Giỏ Hàng</p>
+                        <h1>Sản Phẩm Bạn Đã Chọn</h1>
+                        <p id="itemCountText" class="item-count-text">0 sản phẩm</p>
+                    </div>
+
+                    <div id="cartItems" class="cart-items" aria-live="polite"></div>
+
+                    <div id="emptyCartState" class="empty-state hidden">
+                        <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                        <h2>Giỏ hàng đang trống</h2>
+                        <p>Thêm vài món cà phê yêu thích để bắt đầu đơn hàng của bạn.</p>
+                        <a href="../../index.html#products" class="empty-state-btn">Khám Phá Menu</a>
+                    </div>
+                </div>
+
+                <aside class="summary-panel">
+                    <h2>Tóm Tắt Đơn Hàng</h2>
+
+                    <div class="summary-row">
+                        <span>Tạm tính</span>
+                        <strong id="subtotal">0 đ</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển</span>
+                        <strong id="shippingFee">0 đ</strong>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total-row">
+                        <span>Tổng cộng</span>
+                        <strong id="totalPrice">0 đ</strong>
+                    </div>
+
+                    <p id="shippingNote" class="shipping-note">Đơn từ 300,000 đ được miễn phí vận chuyển.</p>
+
+                    <button id="checkoutBtn" type="button" class="btn-checkout">Tiến Hành Thanh Toán</button>
+                    <button id="clearCartBtn" type="button" class="btn-clear">Xóa Toàn Bộ Giỏ Hàng</button>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./cart.js"></script>
+</body>
+
+</html>

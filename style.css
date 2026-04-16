@@ -118,6 +118,21 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 
+.btn-story {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    border: 2px solid rgba(212, 165, 116, 0.8);
+    backdrop-filter: blur(6px);
+}
+
+.btn-story:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .btn-outline {
     background: transparent;
     color: var(--primary-color);
@@ -255,6 +270,22 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.auth-greeting {
+    max-width: 180px;
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-action-btn {
@@ -1349,6 +1380,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1rem 2rem;
         border-top: 1px solid var(--accent-color);
         margin-top: 1rem;
+    }
+
+    .nav-menu .mobile-actions .auth-greeting {
+        max-width: 100%;
+        text-align: center;
     }
     
     .nav-menu .mobile-actions .btn-login,
